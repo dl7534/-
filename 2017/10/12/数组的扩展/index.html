@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="我的第一个博客">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/10/12/数组的扩展/"/>
+
+
+<meta name="description" content="数组的扩展Array.from() 将类似数组的对象和了可遍历的对象 转为真正的数组  12345678910111213141516let arrayLike = &amp;#123;    &amp;apos;0&amp;apos;: &amp;apos;a&amp;apos;,    &amp;apos;1&amp;apos;: &amp;apos;b&amp;apos;,    &amp;apos;2&amp;apos;: &amp;apos;c&amp;apos;,    length:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的第一个博客">
+<meta property="og:url" content="http://yoursite.com/2017/10/12/数组的扩展/index.html">
+<meta property="og:site_name" content="我的第一个博客">
+<meta property="og:description" content="数组的扩展Array.from() 将类似数组的对象和了可遍历的对象 转为真正的数组  12345678910111213141516let arrayLike = &amp;#123;    &amp;apos;0&amp;apos;: &amp;apos;a&amp;apos;,    &amp;apos;1&amp;apos;: &amp;apos;b&amp;apos;,    &amp;apos;2&amp;apos;: &amp;apos;c&amp;apos;,    length:">
+<meta property="og:updated_time" content="2017-06-23T07:28:00.275Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的第一个博客">
+<meta name="twitter:description" content="数组的扩展Array.from() 将类似数组的对象和了可遍历的对象 转为真正的数组  12345678910111213141516let arrayLike = &amp;#123;    &amp;apos;0&amp;apos;: &amp;apos;a&amp;apos;,    &amp;apos;1&amp;apos;: &amp;apos;b&amp;apos;,    &amp;apos;2&amp;apos;: &amp;apos;c&amp;apos;,    length:">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title>  - 我的第一个博客 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">我的第一个博客</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          
+        
+      </h1>
+
+      <time class="post-time">
+          Oct 12 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h2 id="数组的扩展"><a href="#数组的扩展" class="headerlink" title="数组的扩展"></a>数组的扩展</h2><h4 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from()"></a>Array.from()</h4><blockquote>
+<p>将类似数组的对象和了可遍历的对象 转为真正的数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">let arrayLike = &#123;</div><div class="line">    &apos;0&apos;: &apos;a&apos;,</div><div class="line">    &apos;1&apos;: &apos;b&apos;,</div><div class="line">    &apos;2&apos;: &apos;c&apos;,</div><div class="line">    length: 3</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// ES5的写法</div><div class="line">var arr1 = [].slice.call(arrayLike); // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div><div class="line"></div><div class="line">// ES6的写法</div><div class="line">let arr2 = Array.from(arrayLike);    // [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</div><div class="line"></div><div class="line"></div><div class="line">Array.from(&apos;hello&apos;)</div><div class="line">// [&apos;h&apos;, &apos;e&apos;, &apos;l&apos;, &apos;l&apos;, &apos;o&apos;]</div></pre></td></tr></table></figure>
+<h4 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h4><blockquote>
+<p>将一组值 转化为数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Array.of(3, 11, 8)   // [3,11,8]</div><div class="line">Array.of(3)          // [3] </div><div class="line">Array.of(3).length   // 1</div></pre></td></tr></table></figure>
+<h4 id="copyWithin"><a href="#copyWithin" class="headerlink" title="copyWithin"></a>copyWithin</h4><blockquote>
+<p>在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组</p>
+</blockquote>
+<pre><code>它接受三个参数。
+
+target（必需）：从该位置开始替换数据。
+start（可选）：从该位置开始读取数据，默认为0。如果为负值，表示倒数。
+end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示倒数。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">[1, 2, 3, 4, 5].copyWithin(0, 3)</div><div class="line">// [4, 5, 3, 4, 5]</div><div class="line"></div><div class="line">// 将3号位复制到0号位</div><div class="line">[1, 2, 3, 4, 5].copyWithin(0, 3, 4)</div><div class="line">// [4, 2, 3, 4, 5]</div><div class="line"></div><div class="line">// -2相当于3号位，-1相当于4号位</div><div class="line">[1, 2, 3, 4, 5].copyWithin(0, -2, -1)</div><div class="line">// [4, 2, 3, 4, 5]</div><div class="line"></div><div class="line">// 将3号位复制到0号位</div><div class="line">[].copyWithin.call(&#123;length: 5, 3: 1&#125;, 0, 3)</div><div class="line">// &#123;0: 1, 3: 1, length: 5&#125;</div><div class="line"></div><div class="line">// 将2号位到数组结束，复制到0号位</div><div class="line">var i32a = new Int32Array([1, 2, 3, 4, 5]);</div><div class="line">i32a.copyWithin(0, 2);</div><div class="line">// Int32Array [3, 4, 5, 4, 5]</div><div class="line"></div><div class="line">// 对于没有部署TypedArray的copyWithin方法的平台</div><div class="line">// 需要采用下面的写法</div><div class="line">[].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);</div><div class="line">// Int32Array [4, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
+<h4 id="find-和findIndex"><a href="#find-和findIndex" class="headerlink" title="find()和findIndex()"></a>find()和findIndex()</h4><blockquote>
+<p>find 用于找出第一个符合条件的数组成员。参数是一个回调函数</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[1, 4, -5, 10].find((n) =&gt; n &lt; 0)</div><div class="line">// -5</div><div class="line"></div><div class="line"></div><div class="line">[1, 5, 10, 15].find(function(value, index, arr) &#123;</div><div class="line">  return value &gt; 9;</div><div class="line">&#125;) // 10</div></pre></td></tr></table></figure>
+<blockquote>
+<p>findIndex 用于找出第一个符合条件成员的位置 如何都不符合，返回-1</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[1, 5, 10, 15].findIndex(function(value, index, arr) &#123;</div><div class="line">  return value &gt; 9;</div><div class="line">&#125;) // 2</div></pre></td></tr></table></figure>
+<h4 id="fill"><a href="#fill" class="headerlink" title="fill()"></a>fill()</h4><blockquote>
+<p>fill使用定值  填充一个数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;].fill(7)</div><div class="line">// [7, 7, 7]</div><div class="line"></div><div class="line">new Array(3).fill(7)</div><div class="line">// [7, 7, 7]</div></pre></td></tr></table></figure>
+<blockquote>
+<p> fill方法还可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;].fill(7, 1, 2)</div><div class="line">// [&apos;a&apos;, 7, &apos;c&apos;]</div><div class="line"></div><div class="line">方法从1号位开始，向原数组填充7，到2号位之前结束。</div></pre></td></tr></table></figure>
+<h4 id="entries-keys-和values"><a href="#entries-keys-和values" class="headerlink" title="entries()  keys()和values()"></a>entries()  keys()和values()</h4><blockquote>
+<p>entries() 是对键值对的遍历  keys  是对键名的遍历  values  是对值的遍历</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">for (let index of [&apos;a&apos;, &apos;b&apos;].keys()) &#123;</div><div class="line">  console.log(index);</div><div class="line">&#125;</div><div class="line">// 0</div><div class="line">// 1</div><div class="line"></div><div class="line">for (let elem of [&apos;a&apos;, &apos;b&apos;].values()) &#123;</div><div class="line">  console.log(elem);</div><div class="line">&#125;</div><div class="line">// &apos;a&apos;</div><div class="line">// &apos;b&apos;</div><div class="line"></div><div class="line">for (let [index, elem] of [&apos;a&apos;, &apos;b&apos;].entries()) &#123;</div><div class="line">  console.log(index, elem);</div><div class="line">&#125;</div><div class="line">// 0 &quot;a&quot;</div><div class="line">// 1 &quot;b&quot;</div></pre></td></tr></table></figure>
+<h4 id="includes"><a href="#includes" class="headerlink" title="includes()"></a>includes()</h4><blockquote>
+<p>返回一个布尔值，表示某个数组是否包含给定的值，</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[1, 2, 3].includes(2)     // true</div><div class="line">[1, 2, 3].includes(4)     // false</div><div class="line">[1, 2, NaN].includes(NaN) // true</div></pre></td></tr></table></figure>
+<blockquote>
+<p>该方法的第二个参数表示搜索的起始位置，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），则会重置为从0开始。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[1, 2, 3].includes(3, 3);  // false</div><div class="line">[1, 2, 3].includes(3, -1); // true</div></pre></td></tr></table></figure>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/10/11/first_bolg/">
+        <span class="next-text nav-default"></span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2017
+    <span class="footer-author">dinglei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
