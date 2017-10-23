@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="PHPCMS的使用"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="zikundream">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/10/23/phpcms的使用/"/>
+
+
+<meta name="description" content="什么是WEB服务器？ 它是做什么的 通过工具打开 WAMP 的 www directory 将原有的东西拷贝出去 清空此目录 把要分享的项目拷贝进来 保障有index.html(直接就在目录下) 通过工具 start all server www directory 会被分享出去 别人如何访问？ 通过ipconfig找到自己的ip地址 别人在浏览器中输入192.168.x.y 自己如何访问？ 12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHPCMS的使用">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/phpcms的使用/index.html">
+<meta property="og:site_name" content="zikundream">
+<meta property="og:description" content="什么是WEB服务器？ 它是做什么的 通过工具打开 WAMP 的 www directory 将原有的东西拷贝出去 清空此目录 把要分享的项目拷贝进来 保障有index.html(直接就在目录下) 通过工具 start all server www directory 会被分享出去 别人如何访问？ 通过ipconfig找到自己的ip地址 别人在浏览器中输入192.168.x.y 自己如何访问？ 12">
+<meta property="og:updated_time" content="2017-10-23T10:37:24.876Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHPCMS的使用">
+<meta name="twitter:description" content="什么是WEB服务器？ 它是做什么的 通过工具打开 WAMP 的 www directory 将原有的东西拷贝出去 清空此目录 把要分享的项目拷贝进来 保障有index.html(直接就在目录下) 通过工具 start all server www directory 会被分享出去 别人如何访问？ 通过ipconfig找到自己的ip地址 别人在浏览器中输入192.168.x.y 自己如何访问？ 12">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> PHPCMS的使用 - zikundream </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">zikundream</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          PHPCMS的使用
+        
+      </h1>
+
+      <time class="post-time">
+          Oct 23 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="什么是WEB服务器？-它是做什么的"><a href="#什么是WEB服务器？-它是做什么的" class="headerlink" title="什么是WEB服务器？ 它是做什么的"></a>什么是WEB服务器？ 它是做什么的</h3><ol>
+<li>通过工具打开 WAMP 的 www directory</li>
+<li>将原有的东西拷贝出去 清空此目录 把要分享的项目拷贝进来 保障有index.html(直接就在目录下)</li>
+<li>通过工具 start all server</li>
+<li>www directory 会被分享出去</li>
+<li>别人如何访问？</li>
+<li>通过ipconfig找到自己的ip地址</li>
+<li>别人在浏览器中输入192.168.x.y</li>
+<li>自己如何访问？</li>
+<li>127.0.0.0 或者 localhost 都代表了自己的ip地址 通过他们都可以访问</li>
+</ol>
+<h3 id="什么是动态网站？什么是静态网站"><a href="#什么是动态网站？什么是静态网站" class="headerlink" title="什么是动态网站？什么是静态网站"></a>什么是动态网站？什么是静态网站</h3><ol>
+<li>192.168.3.40/</li>
+<li>192.168.3.40/index.html</li>
+<li>192.168.3.40/index.php</li>
+</ol>
+<p>请求同一个资源得到的永远是相同的东西称为静态</p>
+<p>请求同一个资源会根据情况的不同得到不同的东西称为动态</p>
+<h3 id="phpcms-安装流程"><a href="#phpcms-安装流程" class="headerlink" title="phpcms 安装流程"></a>phpcms 安装流程</h3><ol>
+<li>解压得到两个文件夹</li>
+<li>redeme可以删掉（不用）</li>
+<li>拷贝install_package 下 所有的内容</li>
+<li>拷贝 到 www directory 打开服务器 分享出去</li>
+<li>自己访问localhost (/index.html) «««««««</li>
+<li>按照引导一直点击下一步</li>
+<li>（全新安装） （ root 空密码留空 1@2.com)</li>
+<li>phpcms phpcms // localhost/amdin.php</li>
+</ol>
+<h3 id="三个重要的地址"><a href="#三个重要的地址" class="headerlink" title="三个重要的地址"></a>三个重要的地址</h3><ol>
+<li>localhost/admin.php</li>
+<li>localhost/index.php</li>
+<li>localhost/phpmyadmin</li>
+</ol>
+<h3 id="两个重要的目录"><a href="#两个重要的目录" class="headerlink" title="两个重要的目录"></a>两个重要的目录</h3><ol>
+<li>www/phpcms/tmplates/default/content/</li>
+<li>www/statics/ -css/ -images/ -js/</li>
+</ol>
+<h3 id="几个重要的变量"><a href="#几个重要的变量" class="headerlink" title="几个重要的变量"></a>几个重要的变量</h3><ol>
+<li>{CSS_PATH}</li>
+<li>{JS_PATH}</li>
+<li>{IMG_PATH</li>
+</ol>
+<h3 id="管理页面中的链接"><a href="#管理页面中的链接" class="headerlink" title="管理页面中的链接"></a>管理页面中的链接</h3><ol>
+<li>创建模型</li>
+<li>创建category_xxx.html list_xxx.html show_xxx.html</li>
+<li>模型的名字 模型的数据表名 创建模型的时候选择模版</li>
+<li>新建栏目 模型选择刚创建的 (记得更新栏目缓存)</li>
+<li>管理内容 点击栏目名字左侧的＋号 给这个栏目下添加列表内容</li>
+<li>转入代码</li>
+<li>在header.html中把所有的一级栏目读取出来 带上链接</li>
+<li>在list_xxx.html中把这个栏目下的列表简略内容读取出来</li>
+<li>在show_xxx.html中把列表中的具体内容读取出来</li>
+</ol>
+<p>第七步代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;pc:content action=&quot;category&quot; catid=&quot;0&quot;&#125;</div><div class="line">&#123;php print_r($data)&#125; &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; 这行是调试代码</div><div class="line">&lt;ul&gt;</div><div class="line">&#123;loop $data $r&#125;</div><div class="line">  &lt;li&gt;</div><div class="line">    &lt;a href=&quot;$r[&apos;url&apos;]&quot;&gt;</div><div class="line">      &lt;span&gt;&#123;$r[&apos;catname&apos;]&#125;&lt;/span&gt;</div><div class="line">    &lt;/a&gt;</div><div class="line">  &lt;/li&gt;</div><div class="line">&#123;/loop&#125;</div><div class="line">&lt;/ul&gt;</div><div class="line">&#123;/pc&#125;</div></pre></td></tr></table></figure>
+<p>第八步代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;pc:content action=&quot;lists&quot; catid=$catid&#125;</div><div class="line">&lt;ul&gt;</div><div class="line">&#123;loop $data $r&#125;</div><div class="line">&lt;li&gt;</div><div class="line">&lt;a href=&quot;$r[&apos;url&apos;]&quot;&gt;</div><div class="line">  &lt;span&gt;&#123;$r[&apos;title&apos;]&#125;&lt;/span&gt;</div><div class="line">&lt;/a&gt;</div><div class="line">&lt;/li&gt;</div><div class="line">&#123;/loop&#125;</div><div class="line">&lt;/ul&gt;</div><div class="line">&#123;/pc&#125;</div></pre></td></tr></table></figure>
+<p>第九步代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span&gt;&#123;$content&#125;&lt;/span&gt;</div></pre></td></tr></table></figure>
+<h3 id="常用代码"><a href="#常用代码" class="headerlink" title="常用代码"></a>常用代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div></pre></td><td class="code"><pre><div class="line">&#123;loop subcat(12) $k $v&#125;&#123;/loop&#125;  快速遍历子栏目</div><div class="line"></div><div class="line">  &#123;php &#125;  添加一段php代码</div><div class="line"></div><div class="line">  &#123;str_cut($r[title],56,&apos;...&apos;)&#125;  截取字符串</div><div class="line"></div><div class="line">  &#123;str_cut(strip_tags($v[description]), 150)&#125;  截取字符串</div><div class="line"></div><div class="line">  &#123;thumb($v[thumb],90,60)&#125;  控制图片大小</div><div class="line"></div><div class="line">  &#123;date(&apos;Y-m-d H:i:s&apos;,$r[inputtime])&#125;  设置时间输出格式</div><div class="line"></div><div class="line">  &#123;siteurl($siteid)&#125;  返回到首页的链接</div><div class="line"></div><div class="line">  &#123;catpos($catid)&#125;  生成面包屑html</div><div class="line"></div><div class="line">  &#123;template &quot;content&quot;,&quot;header&quot;&#125; 引入另一个文件</div><div class="line"></div><div class="line">  &lt;!--if语法 和全局的SEO变量--&gt;</div><div class="line">  &#123;if $n==1&#125;class=&quot;on&quot; style=&quot;margin:0&quot;&#123;/if&#125;  用if输出类名</div><div class="line">  &#123;if isset($SEO[&apos;title&apos;]) &amp;&amp; !empty($SEO[&apos;title&apos;])&#125;</div><div class="line">    &#123;$SEO[&apos;title&apos;]&#125;</div><div class="line">  &#123;/if&#125;</div><div class="line">  &#123;$SEO[&apos;site_title&apos;]&#125;</div><div class="line">  &#123;$SEO[&apos;keyword&apos;]&#125;</div><div class="line">  &#123;$SEO[&apos;description&apos;]&#125;</div><div class="line"></div><div class="line"></div><div class="line">  &lt;!--文件路径--&gt;</div><div class="line">  &#123;CSS_PATH&#125;</div><div class="line">  &#123;JS_PATH&#125;</div><div class="line">  &#123;IMG_PATH&#125;</div><div class="line"></div><div class="line"></div><div class="line">  &lt;!--show.html页面中可以直接使用的变量(部分)实质上可以使用数据表中的任何一个字段--&gt;</div><div class="line">  &#123;$title&#125;</div><div class="line">  &#123;$content&#125;</div><div class="line">  &#123;$inputtime&#125;</div><div class="line">  &#123;$copyfrom&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">  &lt;!-- 利用CATEGORYS的一些方式--&gt;</div><div class="line">  &#123;$CAT[]&#125;  取本栏目相关信息</div><div class="line">  &#123;$CATEGORYES[][]&#125;  从本栏目开始取其他栏目相关信息</div><div class="line">  &#123;$CATEGORYS[$CAT[parentid]][catname]&#125;  父栏目名称</div><div class="line">  &#123;$CATEGORYS[$CAT[parentid]][url]&#125; 父栏目链接</div><div class="line">  &#123;$CATEGORYS[$CATEGORYS[$CAT[parentid]][parentid]][catname]&#125;  上上级栏目名称</div><div class="line">  &#123;$CATEGORYS[$CATEGORYS[$CAT[parentid]][parentid]][url]&#125;  上上级栏目链接</div><div class="line"></div><div class="line">  &lt;!--获取推荐位下的内容列表--&gt;</div><div class="line">  &#123;pc:content  action=&quot;position&quot; posid=&quot;9&quot; order=&quot;id DESC ASC&quot; num=&quot;10&quot; cache=&quot;3600&quot; return=&quot;test&quot; page=&quot;$page&quot;&#125;</div><div class="line">    &#123;loop $test $r&#125;</div><div class="line">       &#123;if $num%2==0&#125;&#123;/if&#125;</div><div class="line">    &#123;/loop&#125;</div><div class="line">  &#123;/pc&#125;</div><div class="line">  &#123;$pages&#125; 分页html字符串</div><div class="line"></div><div class="line">  &lt;!--获取某个栏目下的所有子栏目--&gt;</div><div class="line">  &#123;pc:content action=&quot;category&quot; catid=&quot;$parentid&quot; num=&quot;12&quot; siteid=&quot;$siteid&quot; order=&quot;listorder ASC&quot;&#125;</div><div class="line">  &#123;loop $data $r&#125;</div><div class="line">  &lt;li&gt;&lt;a href=&quot;&#123;$r[url]&#125;&quot;&gt;&#123;$r[catname]&#125;&lt;/a&gt;&lt;/li&gt;</div><div class="line">  &#123;/loop&#125;</div><div class="line">  &#123;/pc&#125;</div><div class="line"></div><div class="line">  &lt;!-- 获取某个栏目下的所有内容并分页--&gt;</div><div class="line">  &#123;pc:content action=&quot;lists&quot; catid=&quot;$catid&quot; num=&quot;25&quot; order=&quot;id DESC&quot; page=&quot;$page&quot;&#125;</div><div class="line">  &#123;loop $data $r&#125;</div><div class="line">  	&lt;li&gt;&lt;span class=&quot;rt&quot;&gt;&#123;date(&apos;Y-m-d H:i:s&apos;,$r[inputtime])&#125;&lt;/span&gt;·&lt;a href=&quot;&#123;$r[url]&#125;&quot; target=&quot;_blank&quot;&#123;title_style($r[style])&#125;&gt;&#123;$r[title]&#125;&lt;/a&gt;&lt;/li&gt;</div><div class="line">  	&#123;if $n%5==0&#125;&lt;li class=&quot;bk20 hr&quot;&gt;&lt;/li&gt;&#123;/if&#125;</div><div class="line">  &#123;/loop&#125;</div><div class="line">  &lt;div id=&quot;pages&quot; class=&quot;text-c&quot;&gt;&#123;$pages&#125;&lt;/div&gt;</div><div class="line"></div><div class="line">   &lt;!--遍历数据中的某个数组--&gt;</div><div class="line">  &#123;loop $photos $r&#125;</div><div class="line">  &lt;li&gt;&lt;a href=&quot;&#123;$r[url]&#125;&quot;&gt;&lt;img src=&quot;&#123;thumb($r[url], 75, 45, 0)&#125;&quot; alt=&quot;&#123;$r[alt]&#125;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">  &#123;/loop&#125;</div><div class="line"></div><div class="line"></div><div class="line">  &lt;!--快速遍历输出该栏目下的子栏目--&gt;</div><div class="line">  &#123;loop $arrchild_arr $cid&#125;</div><div class="line">    &lt;li&#123;if $catid==$cid&#125; class=&quot;cur&quot;&#123;/if&#125;&gt;&lt;a href=&quot;&#123;$CATEGORYS[$cid][url]&#125;&quot;&gt;&#123;$CATEGORYS[$cid][catname]&#125;&lt;/a&gt;&lt;/li&gt;</div><div class="line">  &#123;/loop&#125;</div><div class="line"></div><div class="line"></div><div class="line">  &lt;!--show页面的上一篇和下一篇--&gt;</div><div class="line">  &lt;p class=&quot;f14&quot;&gt;</div><div class="line">    &lt;strong&gt;上一篇：&lt;/strong&gt;&lt;a href=&quot;&#123;$previous_page[url]&#125;&quot;&gt;&#123;$previous_page[title]&#125;&lt;/a&gt;&lt;br /&gt;</div><div class="line">    &lt;strong&gt;下一篇：&lt;/strong&gt;&lt;a href=&quot;&#123;$next_page[url]&#125;&quot;&gt;&#123;$next_page[title]&#125;&lt;/a&gt;</div><div class="line">  &lt;/p&gt;</div><div class="line"></div><div class="line">  &lt;!--获取点击次数--&gt;</div><div class="line">  &lt;span id=&quot;hits&quot;&gt;&lt;/span&gt;</div><div class="line">  &lt;script src=&quot;&#123;APP_PATH&#125;api.php?op=count&amp;id=&#123;$id&#125;&amp;modelid=&#123;$modelid&#125;&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">  &lt;!--使用sql语句--&gt;</div><div class="line">  &#123;pc:get sql=&quot;SELECT * FROM phpcms_member&quot; cache=&quot;3600&quot; page=&quot;$page&quot;  return=&quot;data&quot;&#125;</div><div class="line">  &lt;ul&gt;</div><div class="line">    &#123;loop $data $key $val&#125;</div><div class="line">    &#123;$val[username]&#125;</div><div class="line">    &#123;/loop&#125;</div><div class="line">  &lt;/ul&gt;</div><div class="line">  &#123;$pages&#125;</div><div class="line">  &#123;/pc&#125;</div></pre></td></tr></table></figure>
+<h3 id="一些常见的问题处理"><a href="#一些常见的问题处理" class="headerlink" title="一些常见的问题处理"></a>一些常见的问题处理</h3><h5 id="在任何页面都可以使用-pc-pc"><a href="#在任何页面都可以使用-pc-pc" class="headerlink" title="在任何页面都可以使用 {pc}{/pc}"></a>在任何页面都可以使用 {pc}{/pc}</h5><ol>
+<li>index.html $catid = 0;</li>
+<li>header.html $catid = ?; {template “content”,x}</li>
+<li>footer.html $catid = ?; {template “content”,x}</li>
+<li>cebianlan.html $catid = ?; {template “content”,x}</li>
+</ol>
+<h5 id="在这些页面取栏目"><a href="#在这些页面取栏目" class="headerlink" title="在这些页面取栏目"></a>在这些页面取栏目</h5><ol>
+<li>{pc:content action=”category” catid=0}{/pc}</li>
+<li>{pc:content action=”category” catid=12}{/pc} (12这个栏目可以后台操作不显示在导航)</li>
+</ol>
+<h5 id="在这些页面取栏目下的内容"><a href="#在这些页面取栏目下的内容" class="headerlink" title="在这些页面取栏目下的内容"></a>在这些页面取栏目下的内容</h5><ol>
+<li>{pc:content action=”lists” catid = 5}{/pc}</li>
+<li>category_*.html $catid = 使用了这个模型的栏目的id</li>
+<li>(如果一个栏目有子栏目，点击栏目链接会来到category)</li>
+<li>list_*.html $catid = 使用了这个模型的栏目的id</li>
+<li>(如果一个栏目下面再没有子栏目，点击链接会来到list)</li>
+<li>show_*.html $catid = 使用了这个模型的栏目的id</li>
+<li>(每个栏目下用action=”lists”读出来的内容的链接,都是指向对应栏目的show_*.html)</li>
+<li>page_*.html $catid = 使用了这个单页的栏目的id</li>
+<li>(所有单网页的链接都是指向各自的page_*.html)</li>
+</ol>
+<h5 id="查找v9-category那张表中parendid-为-x-的栏目"><a href="#查找v9-category那张表中parendid-为-x-的栏目" class="headerlink" title="查找v9_category那张表中parendid 为 x 的栏目"></a>查找v9_category那张表中parendid 为 x 的栏目</h5><ol>
+<li>{pc:content action=”category” catid=x}{/pc}</li>
+</ol>
+<h5 id="查找v9-模型那里那张数据表-中-catid-为-x-的条目"><a href="#查找v9-模型那里那张数据表-中-catid-为-x-的条目" class="headerlink" title="查找v9_模型那里那张数据表 中 catid 为 x 的条目"></a>查找v9_模型那里那张数据表 中 catid 为 x 的条目</h5><ol>
+<li>{pc:content action=”lists” catid=x}{/pc}</li>
+</ol>
+<h5 id="栏目划分的一般方法"><a href="#栏目划分的一般方法" class="headerlink" title="栏目划分的一般方法"></a>栏目划分的一般方法</h5><p>首页 一般不作为栏目添加(直接写在html页面中)</p>
+<p>新闻动态 (尽量使用新闻模型,让下面的子栏目使用同一模型)</p>
+<p>校内新闻 (新闻模型)</p>
+<p>国际新闻 (新闻模型)</p>
+<p>国内新闻 (新闻模型)</p>
+<p>新闻发布规则 (单网页)</p>
+<p>bbc (外链)</p>
+<p>招聘信息(在首页中是动态的，但是没出现在导航中)</p>
+<p>使用招聘模型把招聘信息作为一个栏目</p>
+<p>(!!!!设置该栏目不在导航显示)</p>
+<p>catid = 89;</p>
+<p>{pc:content action=’lists’ catid=89}{/pc} 去获取这个隐藏栏目下的内容</p>
+<p>关于我们（其下都是单页）</p>
+<p>新建关于我们 (单页) -&gt; page_a.html</p>
+<p>公司简介 -&gt; page_a.html</p>
+<p>董事长简介 -&gt; page_b.html</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/10/23/上传文件/">
+        <span class="next-text nav-default">上传文件</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2017
+    <span class="footer-author">dinglei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
