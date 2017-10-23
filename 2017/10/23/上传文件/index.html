@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="上传文件"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="zikundream">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/10/23/上传文件/"/>
+
+
+<meta name="description" content="123&amp;lt;form method=&amp;quot;post&amp;quot; id=&amp;quot;form&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot;&amp;gt;    &amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; style=&amp;quot;display:none&amp;quot;&amp;gt;&amp;lt;/form">
+<meta property="og:type" content="article">
+<meta property="og:title" content="上传文件">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/上传文件/index.html">
+<meta property="og:site_name" content="zikundream">
+<meta property="og:description" content="123&amp;lt;form method=&amp;quot;post&amp;quot; id=&amp;quot;form&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot;&amp;gt;    &amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; style=&amp;quot;display:none&amp;quot;&amp;gt;&amp;lt;/form">
+<meta property="og:updated_time" content="2017-10-23T10:19:55.085Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="上传文件">
+<meta name="twitter:description" content="123&amp;lt;form method=&amp;quot;post&amp;quot; id=&amp;quot;form&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot;&amp;gt;    &amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; style=&amp;quot;display:none&amp;quot;&amp;gt;&amp;lt;/form">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> 上传文件 - zikundream </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">zikundream</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          上传文件
+        
+      </h1>
+
+      <time class="post-time">
+          Oct 23 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;form method=&quot;post&quot; id=&quot;form&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">    &lt;input type=&quot;file&quot; name=&quot;file&quot; style=&quot;display:none&quot;&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+<h3 id="上传到服务器"><a href="#上传到服务器" class="headerlink" title="上传到服务器"></a>上传到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var form = $(&apos;#form&apos;);</div><div class="line">var formData = new FormData(form[0]);</div><div class="line">formData.append(&apos;id&apos;, &apos;1&apos;);</div><div class="line">$.ajax(&#123;</div><div class="line">    url: &apos;...&apos;,</div><div class="line">    processData: false,</div><div class="line">    contentType: false,</div><div class="line">    type: &apos;post&apos;,</div><div class="line">    data: formData,</div><div class="line">    success: function (data) &#123;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="本地预览图片"><a href="#本地预览图片" class="headerlink" title="本地预览图片"></a>本地预览图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$(&apos;input:file&apos;).on(&apos;change&apos;,function()&#123;</div><div class="line">  $(this).parent().find(&apos;img&apos;).remove();</div><div class="line"></div><div class="line">  var file = this.files[0];</div><div class="line">  var img = $(&apos;&lt;img&gt;&apos;);</div><div class="line">  img.get(0).file = file;</div><div class="line">  $(this).parent().append(img);</div><div class="line"></div><div class="line">  var reader = new FileReader();</div><div class="line">  reader.readAsDataURL(file);</div><div class="line">  reader.onload = (function(img)&#123;</div><div class="line">    return function(img)&#123;</div><div class="line">        img.src = e.target.result;</div><div class="line">    &#125;;</div><div class="line">  &#125;)(img)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="php处理上传文件"><a href="#php处理上传文件" class="headerlink" title="php处理上传文件"></a>php处理上传文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$src = $_FILES[&apos;file&apos;][&apos;tmp_name&apos;];</div><div class="line">$dist = APP . &apos;/static/imgs/&apos; . $_FILES[&apos;file&apos;][&apos;name&apos;];</div><div class="line">move_uploaded_file($src,$dist);</div></pre></td></tr></table></figure>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/10/12/数组的扩展/">
+        <span class="next-text nav-default">数组的扩展</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2017
+    <span class="footer-author">dinglei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
