@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="php基础知识"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="zikundream">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/2017/11/01/php基础知识/"/>
+
+
+<meta name="description" content="基本介绍 php标记 &amp;lt;?php?&amp;gt; 如果文件内容是纯php代码，在文件末尾删除php结束标记。可以避免再php结束标记之后意外的加入了空格或换行符，会导致php开始输出这些空白，而脚本中此时并无输出的意图 1234&amp;lt;?echo &amp;quot;hello world!&amp;quot;;echo &amp;quot;Last statement&amp;quot;;// 脚本结束，并没有php结束标记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php基础知识">
+<meta property="og:url" content="http://yoursite.com/2017/11/01/php基础知识/index.html">
+<meta property="og:site_name" content="zikundream">
+<meta property="og:description" content="基本介绍 php标记 &amp;lt;?php?&amp;gt; 如果文件内容是纯php代码，在文件末尾删除php结束标记。可以避免再php结束标记之后意外的加入了空格或换行符，会导致php开始输出这些空白，而脚本中此时并无输出的意图 1234&amp;lt;?echo &amp;quot;hello world!&amp;quot;;echo &amp;quot;Last statement&amp;quot;;// 脚本结束，并没有php结束标记">
+<meta property="og:updated_time" content="2017-11-01T11:56:31.046Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php基础知识">
+<meta name="twitter:description" content="基本介绍 php标记 &amp;lt;?php?&amp;gt; 如果文件内容是纯php代码，在文件末尾删除php结束标记。可以避免再php结束标记之后意外的加入了空格或换行符，会导致php开始输出这些空白，而脚本中此时并无输出的意图 1234&amp;lt;?echo &amp;quot;hello world!&amp;quot;;echo &amp;quot;Last statement&amp;quot;;// 脚本结束，并没有php结束标记">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> php基础知识 - zikundream </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">zikundream</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          php基础知识
+        
+      </h1>
+
+      <time class="post-time">
+          Nov 01 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><hr>
+<p>php标记 &lt;?php?&gt;</p>
+<p>如果文件内容是纯php代码，在文件末尾删除php结束标记。可以避免再php结束标记之后意外的加入了空格或换行符，会导致php开始输出这些空白，而脚本中此时并无输出的意图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?</div><div class="line">echo &quot;hello world!&quot;;</div><div class="line">echo &quot;Last statement&quot;;</div><div class="line">// 脚本结束，并没有php结束标记</div></pre></td></tr></table></figure>
+<ul>
+<li>1 php作为纯脚本代码运行</li>
+<li>2 php作为CGI执行</li>
+</ul>
+<h4 id="php-嵌入到html中执行"><a href="#php-嵌入到html中执行" class="headerlink" title="php 嵌入到html中执行"></a>php 嵌入到html中执行</h4><blockquote>
+<p>index.html 文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">    &lt;?php if ($experssion == true): ?&gt;</div><div class="line">        This will show if the expresion is true</div><div class="line">    &lt;?php else: ?&gt;</div><div class="line">    Otherwise thsi will show.</div><div class="line">    &lt;?php endif; ?&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>index.php 文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$expression = true;</div><div class="line">include(relpath(&apos;./&apos;).&apos;/index.html&apos;);</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>php 支持8中原始的数据类型</p>
+<ol>
+<li>四种标量类型<ul>
+<li>boolean</li>
+<li>integer</li>
+<li>float</li>
+<li>string</li>
+</ul>
+</li>
+<li>两种复合类型<ul>
+<li>array</li>
+<li>object</li>
+</ul>
+</li>
+<li>两种特殊类型<ul>
+<li>resource</li>
+<li>null</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">// 字符串连接</div><div class="line">$num = 12.8;</div><div class="line">$string = &quot;this is world&quot;.$num;</div><div class="line"></div><div class="line">// 双引号中使用变量</div><div class="line">$world = &quot;world&quot;;</div><div class="line">$hello = &quot;hello &#123;$world&#125;&quot;;</div><div class="line"></div><div class="line">// 转义特殊字符</div><div class="line">$class_name = &quot;\\name&quot;;</div><div class="line">echo $class_name;</div><div class="line"></div><div class="line">// 数组</div><div class="line">$array = arry(</div><div class="line">    &quot;foo&quot; =&gt; &quot;bar&quot;,</div><div class="line">    &quot;bar&quot; =&gt; &quot;foo&quot;,</div><div class="line">    100 =&gt; -100,</div><div class="line">    -100 =&gt; 100,</div><div class="line">);</div><div class="line">var_dump($array[&apos;foo&apos;]);</div><div class="line">unset ($array[100]);</div><div class="line">$array[&apos;X&apos;] = 42;</div><div class="line"></div><div class="line">// 没有键名的索引数组</div><div class="line">$array = array(&quot;foo&quot;,&quot;bar&quot;,&quot;hello&quot;,&quot;world&quot;);</div><div class="line">var_dump($array);</div><div class="line"></div><div class="line">// 遍历</div><div class="line">fareach($array as $key =&gt; $value) &#123;</div><div class="line">    var_dump($key,$value);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 对象</div><div class="line">class foo &#123;</div><div class="line">    function do_foo()&#123;</div><div class="line">        echo &quot;Dong foo&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">$bar = new foo;</div><div class="line">$bar =&gt; do_foo();</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>gettype() 函数可以得到变量的类型</li>
+<li>is_<a href="">type</a> 函数可以用来判断某个变量是否某个类型</li>
+<li>var_dump() 函数会输出变量的类型和值</li>
+</ul>
+<h4 id="php-中的false"><a href="#php-中的false" class="headerlink" title="php 中的false"></a>php 中的false</h4><blockquote>
+<p>必要时可以调用boolean() 函数来实现转换 当转换为boolean时，以下值被认为是false</p>
+</blockquote>
+<ul>
+<li>布尔值FALSE 本身</li>
+<li>整型值0</li>
+<li>浮点值0.0</li>
+<li>空字符节，以及字符串“0”</li>
+<li>不包括任何元素的数组</li>
+<li>不包括任何成员变量的对象</li>
+<li>特殊类型NULL</li>
+<li>从空标记生成的SimpleXML对象</li>
+<li>除了以上情况，其余均为true</li>
+</ul>
+<blockquote>
+<p>PHP 中没有整除的运算符。1/2 产生出 float 0.5。值可以舍弃小数部分强制转换为 integer，或者使用 round() 函数可以更好地进行四舍五入</p>
+<p>要使用八进制表达，数字前必须加上 0（零）。要使用十六进制表达，数字前必须加上 0x。要使用二进制表达，数字前必须加上 0b</p>
+<p>一个字符串 string 就是由一系列的字符组成，其中每个字符等同于一个字节。这意味着 PHP 只能支持 256 的字符集，因此不支持 Unicode</p>
+<p>Resource 资源类型 资源 resource 是一种特殊变量，保存了到外部资源的一个引用 ,可以用 is_resource()函数测定一个变量是否是资源，函数 get_resource_type()则返回该资源的类型。</p>
+<p>NULL值表示一个变量没有值。NULL 类型唯一可能的值就是 NULL。在下列情况下一个变量被认为是 NULL： 1.被赋值为 NULL 2.尚未被赋值 3.被 unset()。</p>
+<p>一些函数如 call_user_func() 或 usort() 可以接受用户自定义的回调函数作为参数。回调函数不止可以是简单函数，还可以是对象的方法，包括静态类方法。</p>
+</blockquote>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>预定义变量</p>
+<ul>
+<li>php 变量的作用域</li>
+<li>php 中在函数内部不能访问外部变量可以输出$GLOBALS查看详情</li>
+<li>php中全局变量在函数中使用时必须声明为global</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$a =1;</div><div class="line">$b = 2;</div><div class="line">function Sum()&#123;</div><div class="line">    global $a , $b;</div><div class="line">    $b = $a + $b;</div><div class="line">&#125;</div><div class="line">Sum()</div><div class="line">echo $b;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<p>使用静态变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    function fac($number)&#123;</div><div class="line">        static $num = 0;</div><div class="line">        echo $num . &quot;\n&quot;;</div><div class="line">        </div><div class="line">        if($number == 0)&#123;</div><div class="line">            $num += $number;</div><div class="line">            return 1;</div><div class="line">        &#125;else &#123;</div><div class="line">            $num += $number;</div><div class="line">            return $number * fac($number -1);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    echo fac(4);</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/10/23/phpcms的使用/">
+        <span class="next-text nav-default">PHPCMS的使用</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2017
+    <span class="footer-author">dinglei.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
