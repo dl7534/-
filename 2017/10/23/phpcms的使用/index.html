@@ -39,7 +39,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/23/phpcms的使用/index.html">
 <meta property="og:site_name" content="zikundream">
 <meta property="og:description" content="什么是WEB服务器？ 它是做什么的 通过工具打开 WAMP 的 www directory 将原有的东西拷贝出去 清空此目录 把要分享的项目拷贝进来 保障有index.html(直接就在目录下) 通过工具 start all server www directory 会被分享出去 别人如何访问？ 通过ipconfig找到自己的ip地址 别人在浏览器中输入192.168.x.y 自己如何访问？ 12">
-<meta property="og:updated_time" content="2017-10-23T10:37:24.876Z">
+<meta property="og:updated_time" content="2018-03-12T09:00:20.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHPCMS的使用">
 <meta name="twitter:description" content="什么是WEB服务器？ 它是做什么的 通过工具打开 WAMP 的 www directory 将原有的东西拷贝出去 清空此目录 把要分享的项目拷贝进来 保障有index.html(直接就在目录下) 通过工具 start all server www directory 会被分享出去 别人如何访问？ 通过ipconfig找到自己的ip地址 别人在浏览器中输入192.168.x.y 自己如何访问？ 12">
@@ -220,7 +220,30 @@
 <p>新建关于我们 (单页) -&gt; page_a.html</p>
 <p>公司简介 -&gt; page_a.html</p>
 <p>董事长简介 -&gt; page_b.html</p>
-
+<h6 id="内容页show模板调用标签"><a href="#内容页show模板调用标签" class="headerlink" title="内容页show模板调用标签"></a>内容页show模板调用标签</h6><p>1、页面标题：{$title}</p>
+<p>2、发表时间：{$inputtime}</p>
+<p>3、内容来源：{$copyfrom}</p>
+<p>4、文章内容：{$content}</p>
+<p>5、缩略图地址：{$thumb}</p>
+<p>6、组图列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;loop $photos $r&#125; </div><div class="line">&lt;li&gt;&lt;a href=&quot;&#123;$r[url]&#125;&quot;&gt;&lt;img src=&quot;&#123;thumb($r[url], 75, 45, 0)&#125;&quot; /&gt;&#123;/loop&#125;</div><div class="line">注释：其中$photos为自定义组图字段，&#123;$r[url]&#125;为图片地址，&#123;thumb($r[url], 75, 45, 0)&#125;为图片缩略图，&#123;$r[alt]&#125;为图片描述。</div></pre></td></tr></table></figure>
+<p>7、栏目名称与栏目拼音与栏目链接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;$CAT[catname]&#125; 与 &#123;$CAT[letter]&#125; 与 &#123;$CAT[url]&#125;</div></pre></td></tr></table></figure>
+<p>8、同级栏目列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;pc:content action=&quot;category&quot; catid=&quot;$parentid&quot; num=&quot;12&quot; siteid=&quot;$siteid&quot; order=&quot;listorder ASC&quot;&#125;</div><div class="line">      &#123;loop $data $r&#125;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;&#123;$r[url]&#125;&quot;&gt;&#123;$r[catname]&#125;&lt;/a&gt;&lt;/li&gt;</div><div class="line">       &#123;/loop&#125;</div><div class="line">&#123;/pc&#125;</div></pre></td></tr></table></figure>
+<p>9、父栏目名称与链接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;$CATEGORYS[$CAT[parentid]][catname]&#125; 与 &#123;$CATEGORYS[$CAT[parentid]][url]&#125;</div></pre></td></tr></table></figure>
+<p>10、一级父栏目列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;pc:content action=&quot;category&quot; catid=&quot;0&quot; num=&quot;34&quot; siteid=&quot;$siteid&quot; order=&quot;listorder ASC&quot;&#125;</div><div class="line">      &#123;loop $data $r&#125;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;&#123;$r[url]&#125;&quot;&gt;&#123;$r[catname]&#125;&lt;/a&gt;&lt;/li&gt;</div><div class="line">      &#123;/loop&#125;</div><div class="line">&#123;/pc&#125;</div></pre></td></tr></table></figure>
+<p>11、 获取上上级栏目名称与链接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;$CATEGORYS[$CATEGORYS[$CAT[parentid]][parentid]][catname]&#125; 与 &#123;$CATEGORYS[$CATEGORYS[$CAT[parentid]][parentid]][url]&#125;</div></pre></td></tr></table></figure>
+<p>12、上一篇：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;$previous_page[url]&#125;、&#123;$previous_page[title]&#125;，</div></pre></td></tr></table></figure>
+<p>13、 下一篇：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;$next_page[url]&#125;、&#123;$next_page[title]&#125;。</div></pre></td></tr></table></figure></p>
+<p>14、相关热词搜索：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;loop $keywords $keyword&#125;</div><div class="line">&lt;a href=&quot;&#123;APP_PATH&#125;index.php?m=content&amp;c=tag&amp;catid=&#123;$catid&#125;&amp;tag=&#123;urlencode($keyword)&#125;&quot; class=&quot;blue&quot;&gt;&#123;$keyword&#125;&lt;/a&gt;</div><div class="line">&#123;/loop&#125;</div></pre></td></tr></table></figure>
+<p>15、相关文章调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;pc:content action=&quot;relation&quot; relation=&quot;$relation&quot; id=&quot;$id&quot; catid=&quot;$catid&quot; num=&quot;5&quot; keywords=&quot;$rs[keywords]&quot;&#125;</div><div class="line">  &#123;if $data&#125;</div><div class="line">    &lt;div class=&quot;related&quot;&gt;</div><div class="line">        &lt;h5 class=&quot;blue&quot;&gt;延伸阅读：&lt;/h5&gt;</div><div class="line">        &lt;ul class=&quot;list blue lh24 f14&quot;&gt;</div><div class="line">            &#123;loop $data $r&#125;</div><div class="line">                &lt;li&gt;·&lt;a href=&quot;&#123;$r[url]&#125;&quot; target=&quot;_blank&quot;&gt;&#123;$r[title]&#125;&lt;/a&gt;&lt;span&gt;(&#123;date(&apos;Y-m-d&apos;,$r[inputtime])&#125;)&lt;/span&gt;&lt;/li&gt;</div><div class="line">            &#123;/loop&#125;</div><div class="line">        &lt;/ul&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &#123;/if&#125;</div><div class="line">&#123;/pc&#125;</div></pre></td></tr></table></figure>
             </div>
           
 
